@@ -112,6 +112,11 @@ class Converter
      */
     public function convert($path)
     {
+        // quit early if conversion makes no sense
+        if ($this->from === $this->to) {
+            return $path;
+        }
+
         $path = $this->normalize($path);
         // if we're not dealing with a relative path, just return absolute
         if (strpos($path, '/') === 0) {
