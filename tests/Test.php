@@ -29,25 +29,25 @@ class ConverterTest extends PHPUnit_Framework_TestCase
         $tests = array();
 
         $tests[] = array(
-            '../images/img.gif',
+            '../images/img.jpg',
             '/home/forkcms/frontend/core/layout/css',
             '/home/forkcms/frontend/cache/minified_css',
-            '../../core/layout/images/img.gif',
+            '../../core/layout/images/img.jpg',
         );
 
         $tests[] = array(
-            '../../images/icon.jpg',
-            '/css/imports/icons.css',
-            '/css/minified.css',
-            '../images/icon.jpg',
+            '../../images/icon.gif',
+            '/css/imports/',
+            '/css/',
+            '../images/icon.gif',
         );
 
         // absolute path - doesn't make sense :)
         $tests[] = array(
-            '/home/username/file.jpg',
-            '/css/imports/icons.css',
-            '/css/minified.css',
-            '/home/username/file.jpg',
+            '/home/username/file.txt',
+            '/css/imports',
+            '/css',
+            '/home/username/file.txt',
         );
 
         return $tests;

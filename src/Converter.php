@@ -29,17 +29,13 @@ class Converter
     protected $to;
 
     /**
-     * @param string $from The original base path.
-     * @param string $to   The new base path.
+     * @param string $from The original base path (directory, not file!)
+     * @param string $to   The new base path (directory, not file!)
      */
     public function __construct($from, $to)
     {
-        // make sure we're dealing with directories
-        $from = @is_file($from) ? dirname($from) : $from;
-        $to = @is_file($to) ? dirname($to) : $to;
-
-        $this->from = $from;
-        $this->to = $to;
+        $this->from = $this->normalize($from);
+        $this->to = $this->normalize($to);
     }
 
     /**
@@ -99,7 +95,7 @@ class Converter
             }
         }
 
-        return implode('/', $shared).'/';
+        return implode('/', $shared);
     }
 
     /**
@@ -132,8 +128,7 @@ class Converter
         $to = substr($to, mb_strlen($shared));
 
         // add .. for every directory that needs to be traversed to new path
-        $to = str_repeat('../', substr_count($to, '/') + 1);
-
-        return $to.$path;
+        $to = str_repeat('../', substr_count($to, '/'));
+        return $to.ltrim($path, '/');
     }
 }
