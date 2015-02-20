@@ -45,7 +45,7 @@ class Converter
     /**
      * Normalize path.
      *
-     * @param string $path
+     * @param  string $path
      * @return string
      */
     protected function normalize($path)
@@ -76,11 +76,12 @@ class Converter
      * share
      *     /home/forkcms/frontend
      *
-     * @param string $path1
-     * @param string $path2
+     * @param  string $path1
+     * @param  string $path2
      * @return string
      */
-    protected function shared($path1, $path2) {
+    protected function shared($path1, $path2)
+    {
         // $path could theoretically be empty (e.g. no path is given), in which
         // case it shouldn't expand to array(''), which would compare to one's
         // root /
@@ -98,7 +99,7 @@ class Converter
             }
         }
 
-        return implode('/', $shared) . '/';
+        return implode('/', $shared).'/';
     }
 
     /**
@@ -110,7 +111,7 @@ class Converter
      *     ../../core/layout/images/img.gif relative to
      *     /home/forkcms/frontend/cache/minified_css
      *
-     * @param string $path The relative path that needs to be converted.
+     * @param  string $path The relative path that needs to be converted.
      * @return string The new relative path.
      */
     public function convert($path)
@@ -122,7 +123,7 @@ class Converter
         }
 
         // normalize paths
-        $path = $this->normalize($this->from . '/' . $path);
+        $path = $this->normalize($this->from.'/'.$path);
         $to = $this->normalize($this->to);
 
         // strip shared ancestor paths
@@ -132,6 +133,7 @@ class Converter
 
         // add .. for every directory that needs to be traversed to new path
         $to = str_repeat('../', substr_count($to, '/') + 1);
-        return $to . $path;
+
+        return $to.$path;
     }
 }
