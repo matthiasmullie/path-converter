@@ -34,8 +34,14 @@ class Converter
      */
     public function __construct($from, $to)
     {
-        $this->from = $this->normalize($from);
-        $this->to = $this->normalize($to);
+        $from = $this->normalize($from);
+        $to = $this->normalize($to);
+
+        $from = $this->dirname($from);
+        $to = $this->dirname($to);
+
+        $this->from = $from;
+        $this->to = $to;
     }
 
     /**
@@ -46,6 +52,9 @@ class Converter
      */
     protected function normalize($path)
     {
+        // attempt to resolve path, or assume path is fine if it doesn't exist
+        $path = realpath($path) ?: $path;
+
         // deal with different operating systems' directory structure
         $path = rtrim(str_replace(DIRECTORY_SEPARATOR, '/', $path), '/');
 
@@ -134,6 +143,39 @@ class Converter
 
         // add .. for every directory that needs to be traversed to new path
         $to = str_repeat('../', substr_count($to, '/'));
+
         return $to.ltrim($path, '/');
+    }
+
+    /**
+     * Attempt to get the directory name from a path.
+     *
+     * @param  string $path
+     * @return string
+     */
+    public function dirname($path)
+    {
+        if (@is_file($path)) {
+            return dirname($path);
+        }
+
+        if (@is_dir($path)) {
+            return rtrim($path, '/');
+        }
+
+        // no known file/dir, start making assumptions
+
+        // ends in / = dir
+        if (substr($path, -1) === '/') {
+            return rtrim($path, '/');
+        }
+
+        // has a dot in the name, likely a file
+        if (preg_match('/(^\/).*\..*$/', $path) !== 0) {
+            return dirname($path);
+        }
+
+        // you're on your own here!
+        return $path;
     }
 }

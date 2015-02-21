@@ -50,6 +50,13 @@ class ConverterTest extends PHPUnit_Framework_TestCase
             '/home/username/file.txt',
         );
 
+        $tests[] = array(
+            'image.jpg',
+            'tests/css/sample/convert_relative_path/source',
+            'tests/css/sample/convert_relative_path/source',
+            'image.jpg',
+        );
+
         return $tests;
     }
 }
