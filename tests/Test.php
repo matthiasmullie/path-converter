@@ -64,6 +64,14 @@ class ConverterTest extends PHPUnit_Framework_TestCase
             '../../core/layout/images/img.jpg',
         );
 
+        // https://github.com/forkcms/forkcms/issues/1186
+        $tests[] = array(
+            '../images/img.jpg',
+            '/Users/mathias/Documents/— Projecten/PROJECT_NAAM/Web/src/Backend/Core/Layout/Css/',
+            '/Users/mathias/Documents/— Projecten/PROJECT_NAAM/Web/src/Backend/Cache/MinifiedCss/',
+            '../../Core/Layout/images/img.jpg',
+        );
+
         return $tests;
     }
 }
