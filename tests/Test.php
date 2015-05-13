@@ -57,6 +57,13 @@ class ConverterTest extends PHPUnit_Framework_TestCase
             'image.jpg',
         );
 
+        $tests[] = array(
+            '../images/img.jpg',
+            'C:/My Documents/forkcms/frontend/core/layout/css',
+            'C:/My Documents/forkcms/frontend/cache/minified_css',
+            '../../core/layout/images/img.jpg',
+        );
+
         return $tests;
     }
 }
