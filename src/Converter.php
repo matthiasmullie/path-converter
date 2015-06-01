@@ -171,7 +171,7 @@ class Converter
         }
 
         // has a dot in the name, likely a file
-        if (preg_match('/(^\/).*\..*$/', $path) !== 0) {
+        if (preg_match('/.*\..*$/', basename($path)) !== 0) {
             return dirname($path);
         }
 

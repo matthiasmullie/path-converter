@@ -72,6 +72,14 @@ class ConverterTest extends PHPUnit_Framework_TestCase
             '../../Core/Layout/images/img.jpg',
         );
 
+        // https://github.com/matthiasmullie/path-converter/issues/1
+        $tests[] = array(
+            'image.jpg',
+            '/var/www/mysite.com/assets/some_random_folder_name/',
+            '/var/www/mysite.com/assets/some_other_random_folder_name/',
+            '../some_random_folder_name/image.jpg',
+        );
+
         return $tests;
     }
 }
