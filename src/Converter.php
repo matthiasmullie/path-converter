@@ -155,11 +155,11 @@ class Converter
      */
     public function dirname($path)
     {
-        if (@is_file($path)) {
+        if (is_file($path)) {
             return dirname($path);
         }
 
-        if (@is_dir($path)) {
+        if (is_dir($path)) {
             return rtrim($path, '/');
         }
 
