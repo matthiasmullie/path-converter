@@ -11,7 +11,7 @@
 ## Usage
 
 ```php
-use MatthiasMullie\PathConverter/Converter;
+use MatthiasMullie\PathConverter\Converter;
 
 $from = '/css/imports/icons.css';
 $to = '/css/minified.css';
