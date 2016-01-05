@@ -34,6 +34,15 @@ class Converter
      */
     public function __construct($from, $to)
     {
+        $shared = $this->shared($from, $to);
+        if ($shared === '') {
+            // when both paths have nothing in common, one of them is probably
+            // absolute while the other is relative
+            // attempt to resolve path, or assume it's fine if it doesn't exist
+            $from = realpath($from) ?: $from;
+            $to = realpath($to) ?: $to;
+        }
+
         $from = $this->normalize($from);
         $to = $this->normalize($to);
 
@@ -52,9 +61,6 @@ class Converter
      */
     protected function normalize($path)
     {
-        // attempt to resolve path, or assume path is fine if it doesn't exist
-        $path = realpath($path) ?: $path;
-
         // deal with different operating systems' directory structure
         $path = rtrim(str_replace(DIRECTORY_SEPARATOR, '/', $path), '/');
 
@@ -134,12 +140,11 @@ class Converter
 
         // normalize paths
         $path = $this->normalize($this->from.'/'.$path);
-        $to = $this->normalize($this->to);
 
         // strip shared ancestor paths
-        $shared = $this->shared($path, $to);
+        $shared = $this->shared($path, $this->to);
         $path = mb_substr($path, mb_strlen($shared));
-        $to = mb_substr($to, mb_strlen($shared));
+        $to = mb_substr($this->to, mb_strlen($shared));
 
         // add .. for every directory that needs to be traversed to new path
         $to = str_repeat('../', mb_substr_count($to, '/'));
