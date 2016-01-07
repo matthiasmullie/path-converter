@@ -8,7 +8,7 @@ use MatthiasMullie\PathConverter\Converter;
 class ConverterTest extends PHPUnit_Framework_TestCase
 {
     /**
-     * Test Converter, provided by dataProvider
+     * Test Converter, provided by dataProvider.
      *
      * @test
      * @dataProvider dataProvider
