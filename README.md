@@ -1,7 +1,7 @@
 # Path converter
 
 [![Build status](https://api.travis-ci.org/matthiasmullie/path-converter.svg?branch=master)](https://travis-ci.org/matthiasmullie/path-converter)
-[![Code coverage](http://img.shields.io/coveralls/matthiasmullie/path-converter.svg)](https://coveralls.io/r/matthiasmullie/path-converter)
+[![Code coverage](http://img.shields.io/codecov/c/github/matthiasmullie/path-converter.svg)](https://codecov.io/github/matthiasmullie/path-converter)
 [![Code quality](http://img.shields.io/scrutinizer/g/matthiasmullie/path-converter.svg)](https://scrutinizer-ci.com/g/matthiasmullie/path-converter)
 [![Latest version](http://img.shields.io/packagist/v/matthiasmullie/path-converter.svg)](https://packagist.org/packages/matthiasmullie/path-converter)
 [![Downloads total](http://img.shields.io/packagist/dt/matthiasmullie/path-converter.svg)](https://packagist.org/packages/matthiasmullie/path-converter)
