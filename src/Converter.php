@@ -167,7 +167,7 @@ class Converter
      *
      * @return string
      */
-    public function dirname($path)
+    protected function dirname($path)
     {
         if (is_file($path)) {
             return dirname($path);
