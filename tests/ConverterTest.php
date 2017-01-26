@@ -1,11 +1,13 @@
 <?php
 
+namespace MatthiasMullie\PathConverter\Tests;
+
 use MatthiasMullie\PathConverter\Converter;
 
 /**
  * Converter test case.
  */
-class ConverterTest extends PHPUnit_Framework_TestCase
+class ConverterTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * Test Converter, provided by dataProvider.
