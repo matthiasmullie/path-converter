@@ -39,8 +39,8 @@ class Converter implements ConverterInterface
             // when both paths have nothing in common, one of them is probably
             // absolute while the other is relative
             $cwd = getcwd();
-            $from = strpos($from, $cwd) === 0 ? $from : $cwd.'/'.$from;
-            $to = strpos($to, $cwd) === 0 ? $to : $cwd.'/'.$to;
+            $from = strpos($from, $cwd) === 0 ? $from : preg_replace('/\/+/', '/', $cwd.'/'.$from);
+            $to = strpos($to, $cwd) === 0 ? $to : preg_replace('/\/+/', '/', $cwd.'/'.$to);
 
             // or traveling the tree via `..`
             // attempt to resolve path, or assume it's fine if it doesn't exist

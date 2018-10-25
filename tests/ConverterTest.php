@@ -82,6 +82,20 @@ class ConverterTest extends \PHPUnit_Framework_TestCase
             '../some_random_folder_name/image.jpg',
         );
 
+        $tests[] = array(
+            'image.jpg',
+            '/var/www/',
+            '/',
+            'var/www/image.jpg',
+        );
+
+        $tests[] = array(
+            'image.jpg',
+            '/',
+            '/var/www/',
+            '../../image.jpg',
+        );
+
         return $tests;
     }
 }
