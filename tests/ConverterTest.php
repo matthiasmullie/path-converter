@@ -96,6 +96,14 @@ class ConverterTest extends \PHPUnit_Framework_TestCase
             '../../image.jpg',
         );
 
+        // https://github.com/matthiasmullie/path-converter/issues/4
+        $tests[] = array(
+            'rotissanser-webfont.eot',
+            'typo3temp/assets/compressed/../../../typo3conf/ext/user_merkl/Resources/Public/Fonts/webfontkit-rotissanser/stylesheet.css',
+            'typo3temp/assets/compressed/merged-abce7d875ee92a78bd5e1871ef774fbe.css',
+            '../../../typo3conf/ext/user_merkl/Resources/Public/Fonts/webfontkit-rotissanser/rotissanser-webfont.eot',
+        );
+
         return $tests;
     }
 }

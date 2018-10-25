@@ -155,7 +155,7 @@ class Converter implements ConverterInterface
         $to = mb_substr($this->to, mb_strlen($shared));
 
         // add .. for every directory that needs to be traversed to new path
-        $to = str_repeat('../', mb_substr_count($to, '/'));
+        $to = str_repeat('../', count(array_filter(explode('/', $to))));
 
         return $to.ltrim($path, '/');
     }
