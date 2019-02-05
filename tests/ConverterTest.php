@@ -82,20 +82,6 @@ class ConverterTest extends \PHPUnit_Framework_TestCase
             '../some_random_folder_name/image.jpg',
         );
 
-        // https://github.com/matthiasmullie/path-converter/issues/6
-        $tests[] = array(
-            './../images/header-section/HeroImage.jpg',
-            '/wordpress/wp-content/themes/racine/styles/',
-            '/wordpress/wp-content/cache/min/',
-            '../../themes/racine/images/header-section/HeroImage.jpg',
-        );
-
-        // https://github.com/matthiasmullie/path-converter/issues/6
-        $tests[] = array(
-            '../images/./header-section/HeroImage2.jpg',
-            '/wordpress/wp-content/themes/racine/styles/',
-            '/wordpress/wp-content/cache/min/',
-            '../../themes/racine/images/header-section/HeroImage2.jpg',
         $tests[] = array(
             'image.jpg',
             '/var/www/',
@@ -116,6 +102,22 @@ class ConverterTest extends \PHPUnit_Framework_TestCase
             'typo3temp/assets/compressed/../../../typo3conf/ext/user_merkl/Resources/Public/Fonts/webfontkit-rotissanser/stylesheet.css',
             'typo3temp/assets/compressed/merged-abce7d875ee92a78bd5e1871ef774fbe.css',
             '../../../typo3conf/ext/user_merkl/Resources/Public/Fonts/webfontkit-rotissanser/rotissanser-webfont.eot',
+        );
+
+        // https://github.com/matthiasmullie/path-converter/issues/6
+        $tests[] = array(
+            './../images/header-section/HeroImage.jpg',
+            '/wordpress/wp-content/themes/racine/styles/',
+            '/wordpress/wp-content/cache/min/',
+            '../../themes/racine/images/header-section/HeroImage.jpg',
+        );
+
+        // https://github.com/matthiasmullie/path-converter/issues/6
+        $tests[] = array(
+            '../images/./header-section/HeroImage2.jpg',
+            '/wordpress/wp-content/themes/racine/styles/',
+            '/wordpress/wp-content/cache/min/',
+            '../../themes/racine/images/header-section/HeroImage2.jpg',
         );
 
         return $tests;
