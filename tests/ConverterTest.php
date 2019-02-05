@@ -82,6 +82,22 @@ class ConverterTest extends \PHPUnit_Framework_TestCase
             '../some_random_folder_name/image.jpg',
         );
 
+        // https://github.com/matthiasmullie/path-converter/issues/6
+        $tests[] = array(
+            './../images/header-section/HeroImage.jpg',
+            '/wordpress/wp-content/themes/racine/styles/',
+            '/wordpress/wp-content/cache/min/',
+            '../../themes/racine/images/header-section/HeroImage.jpg',
+        );
+
+        // https://github.com/matthiasmullie/path-converter/issues/6
+        $tests[] = array(
+            '../images/./header-section/HeroImage2.jpg',
+            '/wordpress/wp-content/themes/racine/styles/',
+            '/wordpress/wp-content/cache/min/',
+            '../../themes/racine/images/header-section/HeroImage2.jpg',
+        );
+
         return $tests;
     }
 }
