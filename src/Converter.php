@@ -72,7 +72,7 @@ class Converter implements ConverterInterface
         $path = rtrim(str_replace(DIRECTORY_SEPARATOR, '/', $path), '/');
 
         // remove leading current directory.
-        if (substr( $path, 0, 2 ) === './') {
+        if (substr($path, 0, 2) === './') {
             $path = substr($path, 2);
         }
 
