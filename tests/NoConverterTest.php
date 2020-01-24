@@ -3,11 +3,12 @@
 namespace MatthiasMullie\PathConverter\Tests;
 
 use MatthiasMullie\PathConverter\NoConverter;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Converter test case.
  */
-class NoConverterTest extends \PHPUnit_Framework_TestCase
+class NoConverterTest extends TestCase
 {
     /**
      * Test Converter, provided by dataProvider.
@@ -28,45 +29,45 @@ class NoConverterTest extends \PHPUnit_Framework_TestCase
      */
     public function dataProvider()
     {
-        $tests = array();
+        $tests = [];
 
-        $tests[] = array(
+        $tests[] = [
             '../images/img.jpg',
             '../images/img.jpg',
-        );
+        ];
 
-        $tests[] = array(
+        $tests[] = [
             '../../images/icon.gif',
             '../../images/icon.gif',
-        );
+        ];
 
         // absolute path - doesn't make sense :)
-        $tests[] = array(
+        $tests[] = [
             '/home/username/file.txt',
             '/home/username/file.txt',
-        );
+        ];
 
-        $tests[] = array(
+        $tests[] = [
             'image.jpg',
             'image.jpg',
-        );
+        ];
 
-        $tests[] = array(
+        $tests[] = [
             '../images/img.jpg',
             '../images/img.jpg',
-        );
+        ];
 
         // https://github.com/forkcms/forkcms/issues/1186
-        $tests[] = array(
+        $tests[] = [
             '../images/img.jpg',
             '../images/img.jpg',
-        );
+        ];
 
         // https://github.com/matthiasmullie/path-converter/issues/1
-        $tests[] = array(
+        $tests[] = [
             'image.jpg',
             'image.jpg',
-        );
+        ];
 
         return $tests;
     }
