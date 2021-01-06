@@ -3,11 +3,12 @@
 namespace MatthiasMullie\PathConverter\Tests;
 
 use MatthiasMullie\PathConverter\NoConverter;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Converter test case.
  */
-class NoConverterTest extends \PHPUnit_Framework_TestCase
+class NoConverterTest extends TestCase
 {
     /**
      * Test Converter, provided by dataProvider.
