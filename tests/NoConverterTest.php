@@ -14,6 +14,7 @@ class NoConverterTest extends TestCase
      * Test Converter, provided by dataProvider.
      *
      * @test
+     *
      * @dataProvider dataProvider
      */
     public function convert($relative, $expected)

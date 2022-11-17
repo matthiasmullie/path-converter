@@ -40,8 +40,8 @@ class Converter implements ConverterInterface
             // when both paths have nothing in common, one of them is probably
             // absolute while the other is relative
             $root = $root ?: getcwd();
-            $from = strpos($from, $root) === 0 ? $from : preg_replace('/\/+/', '/', $root.'/'.$from);
-            $to = strpos($to, $root) === 0 ? $to : preg_replace('/\/+/', '/', $root.'/'.$to);
+            $from = strpos($from, $root) === 0 ? $from : preg_replace('/\/+/', '/', $root . '/' . $from);
+            $to = strpos($to, $root) === 0 ? $to : preg_replace('/\/+/', '/', $root . '/' . $to);
 
             // or traveling the tree via `..`
             // attempt to resolve path, or assume it's fine if it doesn't exist
@@ -156,7 +156,7 @@ class Converter implements ConverterInterface
         }
 
         // normalize paths
-        $path = $this->normalize($this->from.'/'.$path);
+        $path = $this->normalize($this->from . '/' . $path);
 
         // strip shared ancestor paths
         $shared = $this->shared($path, $this->to);
@@ -166,7 +166,7 @@ class Converter implements ConverterInterface
         // add .. for every directory that needs to be traversed to new path
         $to = str_repeat('../', count(array_filter(explode('/', $to))));
 
-        return $to.ltrim($path, '/');
+        return $to . ltrim($path, '/');
     }
 
     /**

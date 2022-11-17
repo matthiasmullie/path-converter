@@ -14,11 +14,12 @@ class ConverterTest extends TestCase
      * Test Converter, provided by dataProvider.
      *
      * @test
+     *
      * @dataProvider dataProvider
      */
     public function convert($relative, $from, $to, $expected)
     {
-        $converter = new Converter($from, $to);
+        $converter = new Converter($from, $to, '/');
         $result = $converter->convert($relative);
 
         $this->assertEquals($expected, $result);

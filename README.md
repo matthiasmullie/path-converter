@@ -1,11 +1,10 @@
 # Path converter
 
-[![Build status](https://api.travis-ci.org/matthiasmullie/path-converter.svg?branch=master)](https://travis-ci.org/matthiasmullie/path-converter)
-[![Code coverage](http://img.shields.io/codecov/c/github/matthiasmullie/path-converter.svg)](https://codecov.io/github/matthiasmullie/path-converter)
-[![Code quality](http://img.shields.io/scrutinizer/g/matthiasmullie/path-converter.svg)](https://scrutinizer-ci.com/g/matthiasmullie/path-converter)
-[![Latest version](http://img.shields.io/packagist/v/matthiasmullie/path-converter.svg)](https://packagist.org/packages/matthiasmullie/path-converter)
-[![Downloads total](http://img.shields.io/packagist/dt/matthiasmullie/path-converter.svg)](https://packagist.org/packages/matthiasmullie/path-converter)
-[![License](http://img.shields.io/packagist/l/matthiasmullie/path-converter.svg)](https://github.com/matthiasmullie/path-converter/blob/master/LICENSE)
+[![Build status](https://img.shields.io/github/workflow/status/matthiasmullie/path-converter/test-suite?style=flat-square)](https://github.com/matthiasmullie/path-converter/actions/workflows/test.yml)
+[![Code coverage](http://img.shields.io/codecov/c/gh/matthiasmullie/path-converter?style=flat-square)](https://codecov.io/gh/matthiasmullie/path-converter)
+[![Latest version](http://img.shields.io/packagist/v/matthiasmullie/path-converter?style=flat-square)](https://packagist.org/packages/matthiasmullie/path-converter)
+[![Downloads total](http://img.shields.io/packagist/dt/matthiasmullie/path-converter?style=flat-square)](https://packagist.org/packages/matthiasmullie/path-converter)
+[![License](http://img.shields.io/packagist/l/matthiasmullie/path-converter?style=flat-square)](https://github.com/matthiasmullie/path-converter/blob/master/LICENSE)
 
 
 ## Usage
@@ -38,7 +37,7 @@ now relative to $to (in constructor)
 
 ## Installation
 
-Simply add a dependency on matthiasmullie/path-converter to your composer.json file if you use [Composer](https://getcomposer.org/) to manage the dependencies of your project:
+Simply add a dependency on `matthiasmullie/path-converter` to your composer.json file if you use [Composer](https://getcomposer.org/) to manage the dependencies of your project:
 
 ```sh
 composer require matthiasmullie/path-converter
