@@ -1,0 +1,54 @@
+Search.appendIndex(
+    [
+                {
+            "fqsen": "\\MatthiasMullie\\PathConverter\\Converter",
+            "name": "Converter",
+            "summary": "Convert\u0020paths\u0020relative\u0020from\u00201\u0020file\u0020to\u0020another.",
+            "url": "classes/MatthiasMullie-PathConverter-Converter.html"
+        },                {
+            "fqsen": "\\MatthiasMullie\\PathConverter\\Converter\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/MatthiasMullie-PathConverter-Converter.html#method___construct"
+        },                {
+            "fqsen": "\\MatthiasMullie\\PathConverter\\Converter\u003A\u003Aconvert\u0028\u0029",
+            "name": "convert",
+            "summary": "Convert\u0020paths\u0020relative\u0020from\u00201\u0020file\u0020to\u0020another.",
+            "url": "classes/MatthiasMullie-PathConverter-Converter.html#method_convert"
+        },                {
+            "fqsen": "\\MatthiasMullie\\PathConverter\\ConverterInterface",
+            "name": "ConverterInterface",
+            "summary": "Convert\u0020file\u0020paths.",
+            "url": "classes/MatthiasMullie-PathConverter-ConverterInterface.html"
+        },                {
+            "fqsen": "\\MatthiasMullie\\PathConverter\\ConverterInterface\u003A\u003Aconvert\u0028\u0029",
+            "name": "convert",
+            "summary": "Convert\u0020file\u0020paths.",
+            "url": "classes/MatthiasMullie-PathConverter-ConverterInterface.html#method_convert"
+        },                {
+            "fqsen": "\\MatthiasMullie\\PathConverter\\NoConverter",
+            "name": "NoConverter",
+            "summary": "Don\u0027t\u0020convert\u0020paths.",
+            "url": "classes/MatthiasMullie-PathConverter-NoConverter.html"
+        },                {
+            "fqsen": "\\MatthiasMullie\\PathConverter\\NoConverter\u003A\u003Aconvert\u0028\u0029",
+            "name": "convert",
+            "summary": "Convert\u0020file\u0020paths.",
+            "url": "classes/MatthiasMullie-PathConverter-NoConverter.html#method_convert"
+        },                {
+            "fqsen": "\\",
+            "name": "\\",
+            "summary": "",
+            "url": "namespaces/default.html"
+        },                {
+            "fqsen": "\\MatthiasMullie\\PathConverter",
+            "name": "PathConverter",
+            "summary": "",
+            "url": "namespaces/matthiasmullie-pathconverter.html"
+        },                {
+            "fqsen": "\\MatthiasMullie",
+            "name": "MatthiasMullie",
+            "summary": "",
+            "url": "namespaces/matthiasmullie.html"
+        }            ]
+);
