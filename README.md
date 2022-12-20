@@ -1,6 +1,6 @@
 # Path converter
 
-[![Build status](https://img.shields.io/github/workflow/status/matthiasmullie/path-converter/test-suite?style=flat-square)](https://github.com/matthiasmullie/path-converter/actions/workflows/test.yml)
+[![Build status](https://img.shields.io/github/actions/workflow/status/matthiasmullie/path-converter/test.yml?branch=master&style=flat-square)](https://github.com/matthiasmullie/path-converter/actions/workflows/test.yml)
 [![Code coverage](http://img.shields.io/codecov/c/gh/matthiasmullie/path-converter?style=flat-square)](https://codecov.io/gh/matthiasmullie/path-converter)
 [![Latest version](http://img.shields.io/packagist/v/matthiasmullie/path-converter?style=flat-square)](https://packagist.org/packages/matthiasmullie/path-converter)
 [![Downloads total](http://img.shields.io/packagist/dt/matthiasmullie/path-converter?style=flat-square)](https://packagist.org/packages/matthiasmullie/path-converter)
