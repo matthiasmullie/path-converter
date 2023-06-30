@@ -28,7 +28,7 @@ class NoConverterTest extends TestCase
     /**
      * @return array [relative, from, to, expected result]
      */
-    public function dataProvider()
+    public static function dataProvider()
     {
         $tests = array();
 
