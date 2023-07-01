@@ -12,5 +12,4 @@ jobs:
       - name: Test (twice, if needed)
         run: make test || make test
       - name: Healthcheck ping
-        run: wget https://healthchecks.home.mullie.eu/ping/1cbfa9c8-b268-4f97-b310-78b7d0d7582a -T 10 -t 5 -O /dev/null
-
+        run: wget https://healthchecks.home.mullie.eu/ping/4062be3a-3426-4f9a-a7db-52ec423df66b -T 10 -t 5 -O /dev/null
